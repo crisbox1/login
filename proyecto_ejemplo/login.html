@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" required>
+            
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" required>
+            
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="errorMensaje" style="color: red; display: none;">Usuario o contraseña incorrectos</p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            let usuario = document.getElementById("usuario").value.trim();
+            let contraseña = document.getElementById("contraseña").value.trim();
+
+            // Usuario y contraseña correctos
+            if (usuario === "admin" && contraseña === "1234") {
+                localStorage.setItem("usuarioLogueado", "true"); // Guarda el estado de sesión
+                window.location.href = "index.html"; // Redirige a la página principal
+            } else {
+                document.getElementById("errorMensaje").style.display = "block"; // Muestra mensaje de error
+            }
+        });
+    </script>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+    <script>
+        function cerrarSesion() {
+            localStorage.removeItem("usuarioLogueado"); // Borra el estado de sesión
+            window.location.href = "login.html"; // Redirige al login
+        }
+    </script>
+    
+</body>
+</html>
