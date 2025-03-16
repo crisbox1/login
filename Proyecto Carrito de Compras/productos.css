@@ -1,0 +1,279 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 25px cyan;
+}
+
+/* Menú de navegación */
+nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+}
+
+nav h1 {
+    font-size: 50px;
+    color: cyan;
+    text-shadow: 0 0 15px cyan;
+    text-align: center;
+    margin: 0 10px;
+    gap: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+main {
+    margin-top: 120px;
+}
+
+.menu-de-inicio {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.side-image {
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 5%;
+}
+
+.right {
+    right: 5%;
+}
+
+.menu-de-inicio {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+#productos {
+    padding-top: 110px; 
+    text-align: center;
+}
+
+.titulo-productos {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: cyan;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    background: #222;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px cyan;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+button {
+    background: cyan;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #00ffff;
+}
+
+
+#carrito-container {
+    position: relative;
+}
+
+#carrito {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: black;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    padding: 10px;
+    width: 280px;
+    box-shadow: 0 0 10px cyan;
+    z-index: 1000;
+    max-height: 80vh; /* Máximo alto del carrito */
+    overflow-y: auto; /* Agregar scroll si es necesario */
+    transition: max-height 0.3s ease-in-out; /* Animación suave */
+}
+
+#carrito h3 {
+    text-align: center;
+    color: cyan;
+}
+
+#carrito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#carrito ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid cyan;
+    color: white;
+}
+
+#contador-carrito {
+    background: cyan;
+    color: black;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+#carrito button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#carrito button:hover {
+    background: darkred;
+}
+#carrito.mostrar {
+    display: block;
+}
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px; /* Espacio entre texto y botón */
+    padding: 5px;
+    border-bottom: 1px solid cyan;
+    font-size: 12px; /* Reducir tamaño de texto */
+}
+.btn-eliminar {
+    background: red;
+    color: white;
+    border: none;
+    padding: 2px 5px; /* Reducir tamaño */
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px; /* Reducir fuente */
+    width: 20px; /* Establecer ancho */
+    height: 20px; /* Establecer altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-image {
+    position: absolute;
+    width: 20%;  /* Ajustar tamaño */
+    max-width: 300px;  /* Limitar ancho */
+    top: 10%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 2%;  /* Ajustar para alineación */
+}
+
+.right {
+    right: 2%;  /* Asegurar alineación */
+}
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px;
+    background: rgb(8, 225, 215);
+}
+p {
+    max-width: 80%;
+    margin: auto;
+    font-size: px;
+    text-align: center;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}

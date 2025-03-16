@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2 {
+    max-width: 80%;
+    text-align: center;
+    font-size: 80px;
+    color: cyan;
+    padding-top: 40px;
+    margin: auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: rgba(0, 255, 255, 0.5);
+
+}
+/* Fondo del video */
+#video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Para que el video quede detrás del contenido */
+}
+
+/* Contenedor del login */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15); /* Transparencia con glassmorphism */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    animation: distorsion 3s infinite alternate ease-in-out; /* Animación */
+}
+
+/* Título del formulario */
+.login-container h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: cyan;
+}
+
+/* Estilos de los inputs */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(64, 3, 138, 0.3);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    text-align: center;
+}
+.login-container label {
+    width: 0%;
+    padding: 5px;
+    background: rgb(20, 26, 44);
+    color: white;
+    border: none;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+/* Botón de ingreso */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: rgb(11, 22, 57);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efecto hover en el botón */
+.login-container button:hover {
+    background: rgb(8, 130, 161);
+}
